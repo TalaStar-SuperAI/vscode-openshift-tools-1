@@ -674,7 +674,7 @@ export class Cluster extends OpenShiftItem implements Disposable {
                 // continue
             }
             const signal = abortController?.signal;
-            const options = { rejectUnauthorized: false, signal };
+            const options = { signal };
             request(`${url}/api`, options, (response) => {
                 if (response.statusCode < 500) {
                     resolve(true);
